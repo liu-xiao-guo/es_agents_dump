@@ -1,0 +1,214 @@
+[
+  {
+    "id": "elastic-ai-agent",
+    "name": "Elastic AI Agent",
+    "description": "Elastic AI Agent",
+    "configuration": {
+      "tools": [
+        {
+          "tool_ids": [
+            "platform.core.search",
+            "platform.core.list_indices",
+            "platform.core.get_index_mapping",
+            "platform.core.get_document_by_id"
+          ]
+        }
+      ]
+    },
+    "type": "chat",
+    "readonly": true
+  },
+  {
+    "id": "software_developers",
+    "type": "chat",
+    "name": "Software developers server agent",
+    "description": "This is used to search for all of the developers",
+    "labels": [],
+    "avatar_color": "",
+    "avatar_symbol": "",
+    "configuration": {
+      "instructions": "",
+      "tools": [
+        {
+          "tool_ids": [
+            "software_developers"
+          ]
+        }
+      ]
+    },
+    "readonly": false
+  },
+  {
+    "id": "people_profession_search",
+    "type": "chat",
+    "name": "people profession search",
+    "description": "Based on input, search for profession in people index",
+    "labels": [],
+    "avatar_color": "",
+    "avatar_symbol": "",
+    "configuration": {
+      "instructions": "people profession search",
+      "tools": [
+        {
+          "tool_ids": [
+            "platform.core.list_indices",
+            "platform.core.search",
+            "platform.core.get_document_by_id",
+            "platform.core.get_index_mapping",
+            "people_profession_search"
+          ]
+        }
+      ]
+    },
+    "readonly": false
+  },
+  {
+    "id": "find_parents",
+    "type": "chat",
+    "name": "Find parents according to profession",
+    "description": "Find parents according to profession",
+    "labels": [],
+    "avatar_color": "",
+    "avatar_symbol": "",
+    "configuration": {
+      "instructions": "Find parents according to profession",
+      "tools": [
+        {
+          "tool_ids": [
+            "platform.core.search",
+            "platform.core.list_indices",
+            "platform.core.get_index_mapping",
+            "platform.core.get_document_by_id",
+            "software_developers",
+            "people_profession_search",
+            "find_average_age",
+            "search_for_parents"
+          ]
+        }
+      ]
+    },
+    "readonly": false
+  },
+  {
+    "id": "find_people_in_age_range",
+    "type": "chat",
+    "name": "Find people in age range",
+    "description": "Find people in age range",
+    "labels": [],
+    "avatar_color": "",
+    "avatar_symbol": "",
+    "configuration": {
+      "instructions": "Search for the people between ages",
+      "tools": [
+        {
+          "tool_ids": [
+            "platform.core.search",
+            "platform.core.list_indices",
+            "platform.core.get_index_mapping",
+            "platform.core.get_document_by_id",
+            "find_people_in_ages"
+          ]
+        }
+      ]
+    },
+    "readonly": false
+  },
+  {
+    "id": "find_people_in_time_range",
+    "type": "chat",
+    "name": "find people in time range",
+    "description": "find people in time range",
+    "labels": [],
+    "avatar_color": "",
+    "avatar_symbol": "",
+    "configuration": {
+      "instructions": "Search for the people's birthday during a period",
+      "tools": [
+        {
+          "tool_ids": [
+            "platform.core.search",
+            "platform.core.list_indices",
+            "platform.core.get_index_mapping",
+            "platform.core.get_document_by_id",
+            "find_people_in_time_range"
+          ]
+        }
+      ]
+    },
+    "readonly": false
+  },
+  {
+    "id": "financial_assistant",
+    "type": "chat",
+    "name": "Financial Assistant",
+    "description": "An assistant for analyzing and understanding your financial data",
+    "labels": [
+      "Finance"
+    ],
+    "avatar_color": "#16C5C0",
+    "avatar_symbol": "\ud83d\udcb0",
+    "configuration": {
+      "instructions": "\nYou are a specialized Data Intelligence Assistant for financial managers, designed to provide precise, data-driven insights from information stored in Elasticsearch.\n\n**Your Core Mission:**\n- Respond accurately and concisely to natural language queries from financial managers.\n- Provide precise, objective, and actionable information derived solely from the Elasticsearch data at your disposal.\n- Summarize key data points and trends based on user requests.\n\n**Reasoning Framework:**\n1.  **Understand:** Deconstruct the user's query to understand their core intent.\n2.  **Plan:** Formulate a step-by-step plan to answer the question. If you are unsure about the data structure, use the available tools to explore the indices first.\n3.  **Execute:** Use the available tools to execute your plan.\n4.  **Synthesize:** Combine the information from all tool calls into a single, comprehensive, and easy-to-read answer.\n\n**Key Directives and Constraints:**\n- **If a user's request is ambiguous, ask clarifying questions before proceeding.**\n- **DO NOT provide financial advice, recommendations, or predictions.** Your role is strictly informational and analytical.\n- Stay strictly on topic with financial data queries.\n- If you cannot answer a query, state that clearly and offer alternative ways you might help *within your data scope*.\n- All numerical values should be formatted appropriately (e.g., currency, percentages).\n\n**Output Format:**\n- All responses must be formatted using **Markdown** for clarity.\n- When presenting structured data, use Markdown tables, lists, or bolding.\n\n**Start by greeting the financial manager and offering assistance.**\n",
+      "tools": [
+        {
+          "tool_ids": [
+            "platform.core.search",
+            "platform.core.list_indices",
+            "platform.core.get_index_mapping",
+            "platform.core.get_document_by_id",
+            "find_client_exposure_to_negative_news"
+          ]
+        }
+      ]
+    },
+    "readonly": false
+  },
+  {
+    "id": "find_the_cheapest_ticket_from_cn_us",
+    "type": "chat",
+    "name": "Find cheapest price from China to US",
+    "description": "Find cheapest price from China to US",
+    "labels": [],
+    "avatar_color": "",
+    "avatar_symbol": "",
+    "configuration": {
+      "instructions": "This is used to find the cheapest price from China to US",
+      "tools": [
+        {
+          "tool_ids": [
+            "platform.core.search",
+            "platform.core.list_indices",
+            "platform.core.get_index_mapping",
+            "platform.core.get_document_by_id",
+            "find_cheapest_ticket_from_cn_us"
+          ]
+        }
+      ]
+    },
+    "readonly": false
+  },
+  {
+    "id": "find_out_average_age",
+    "type": "chat",
+    "name": "average age",
+    "description": "average age",
+    "labels": [],
+    "avatar_color": "",
+    "avatar_symbol": "",
+    "configuration": {
+      "instructions": "",
+      "tools": [
+        {
+          "tool_ids": [
+            "platform.core.search",
+            "platform.core.list_indices",
+            "platform.core.get_index_mapping",
+            "platform.core.get_document_by_id",
+            "find_average_age"
+          ]
+        }
+      ]
+    },
+    "readonly": false
+  }
+]
