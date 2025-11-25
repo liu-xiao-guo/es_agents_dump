@@ -19,19 +19,23 @@
     "readonly": true
   },
   {
-    "id": "software_developers",
+    "id": "find_people_in_age_range",
     "type": "chat",
-    "name": "Software developers server agent",
-    "description": "This is used to search for all of the developers",
+    "name": "Find people in age range",
+    "description": "Find people in age range",
     "labels": [],
     "avatar_color": "",
     "avatar_symbol": "",
     "configuration": {
-      "instructions": "",
+      "instructions": "Search for the people between ages",
       "tools": [
         {
           "tool_ids": [
-            "software_developers"
+            "platform.core.search",
+            "platform.core.list_indices",
+            "platform.core.get_index_mapping",
+            "platform.core.get_document_by_id",
+            "find_people_in_ages"
           ]
         }
       ]
@@ -63,6 +67,26 @@
     "readonly": false
   },
   {
+    "id": "software_developers",
+    "type": "chat",
+    "name": "Software developers server agent",
+    "description": "This is used to search for all of the developers",
+    "labels": [],
+    "avatar_color": "",
+    "avatar_symbol": "",
+    "configuration": {
+      "instructions": "",
+      "tools": [
+        {
+          "tool_ids": [
+            "software_developers"
+          ]
+        }
+      ]
+    },
+    "readonly": false
+  },
+  {
     "id": "find_parents",
     "type": "chat",
     "name": "Find parents according to profession",
@@ -83,30 +107,6 @@
             "people_profession_search",
             "find_average_age",
             "search_for_parents"
-          ]
-        }
-      ]
-    },
-    "readonly": false
-  },
-  {
-    "id": "find_people_in_age_range",
-    "type": "chat",
-    "name": "Find people in age range",
-    "description": "Find people in age range",
-    "labels": [],
-    "avatar_color": "",
-    "avatar_symbol": "",
-    "configuration": {
-      "instructions": "Search for the people between ages",
-      "tools": [
-        {
-          "tool_ids": [
-            "platform.core.search",
-            "platform.core.list_indices",
-            "platform.core.get_index_mapping",
-            "platform.core.get_document_by_id",
-            "find_people_in_ages"
           ]
         }
       ]

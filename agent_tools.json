@@ -56,17 +56,6 @@
     "readonly": true
   },
   {
-    "id": "software_developers",
-    "type": "esql",
-    "description": " Retrieve all the software developers from people index",
-    "tags": [],
-    "configuration": {
-      "query": " FROM people METADATA _score | WHERE MATCH(description, \"software developer\")",
-      "params": {}
-    },
-    "readonly": false
-  },
-  {
     "id": "search_for_parents",
     "type": "esql",
     "description": "Based on inputs to search a person's parent",
@@ -80,6 +69,17 @@
           "optional": false
         }
       }
+    },
+    "readonly": false
+  },
+  {
+    "id": "software_developers",
+    "type": "esql",
+    "description": " Retrieve all the software developers from people index",
+    "tags": [],
+    "configuration": {
+      "query": " FROM people METADATA _score | WHERE MATCH(description, \"software developer\")",
+      "params": {}
     },
     "readonly": false
   },
