@@ -38,6 +38,7 @@ def make_http_request(url, method="GET", headers=None, data=None, params=None):
             headers=headers,
             json=data,
             params=params
+            # verify=False
         )
         response.raise_for_status()
         return response

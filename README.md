@@ -8,9 +8,11 @@ This project shows how to maintain your agents and tools created by the AI Agent
 
 You can run them like:
 
-- python es_agents_dump.py
-- python es_agents_import.py
-- python es_agents_clear.py
+python es_agents_dump.py
+
+python es_agents_import.py
+
+python es_agents_clear.py
 
 You can even maintain the two JSON files to create new tools and agents easily. You directly edit the files and then re-import the tools and agents.
 
@@ -22,3 +24,5 @@ You can even maintain the two JSON files to create new tools and agents easily. 
 - ES_API_KEY=WnJwR3RKb0JGQVVCVjdnb29yUkI6RHotbGZBTmJzMDJWUWszbTAtbDVjQQ==
 
 You have to make changes according to your setup.
+
+The whole API spec can be found at https://www.elastic.co/docs/api/doc/kibana/group/endpoint-agent-builder
