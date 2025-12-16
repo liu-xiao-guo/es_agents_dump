@@ -28,4 +28,5 @@ You have to make changes according to your setup.
 The whole API spec can be found at https://www.elastic.co/docs/api/doc/kibana/group/endpoint-agent-builder
 
 **License** ⚖️
-This software is licensed under the [https://github.com/elastic/elasticsearch-labs/blob/main/LICENSE](Apache License, version 2 ("ALv2")).
+
+This software is licensed under the [Apache License, version 2 ("ALv2")](https://github.com/elastic/elasticsearch-labs/blob/main/LICENSE).
