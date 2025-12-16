@@ -26,3 +26,6 @@ You can even maintain the two JSON files to create new tools and agents easily. 
 You have to make changes according to your setup.
 
 The whole API spec can be found at https://www.elastic.co/docs/api/doc/kibana/group/endpoint-agent-builder
+
+**License** ⚖️
+This software is licensed under the [https://github.com/elastic/elasticsearch-labs/blob/main/LICENSE](Apache License, version 2 ("ALv2")).
